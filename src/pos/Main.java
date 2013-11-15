@@ -1,3 +1,4 @@
+
 package pos;
 
 import java.math.BigDecimal;
@@ -9,10 +10,9 @@ public class Main {
 	/* Fields Omitted */
 
 	/**
-	 * The main method controls the creation of the GUI, the initiation of the
-	 * menu, dispatch system, time sheet, and loads information from all
-	 * databases into memory. It also deals with access control for user
-	 * logins/actions.
+	 * The main method controls the creation of the GUI, the initiation of the menu, dispatch
+	 * system, time sheet, and loads information from all databases into memory. It also deals with
+	 * access control for user logins/actions.
 	 * 
 	 * <pre>
 	 * The program has not yet started
@@ -39,15 +39,13 @@ public class Main {
 		// File file = new File("input.stuff");
 
 		/*
-		 * For this test, we create a Customer with test information then we
-		 * create an Order with test information then we attach the Customer to
-		 * the Order then we create a MenuItem then we add several Toppings to
-		 * the MenuItem and repeat that process a few times then we test the
-		 * functionality of the Order/Customer unit
+		 * For this test, we create a Customer with test information then we create an Order with
+		 * test information then we attach the Customer to the Order then we create a MenuItem then
+		 * we add several Toppings to the MenuItem and repeat that process a few times then we test
+		 * the functionality of the Order/Customer unit
 		 */
 
 		// begin test
-		
 
 		int input = 0;
 		Scanner sc = new Scanner(System.in);
@@ -95,8 +93,7 @@ public class Main {
 					posTopps.add(new Topping("Potatoe", "Standard", new BigDecimal(3)));
 					tmpPizza.setPosTopps(posTopps);
 					// done initializing
-					
-					
+
 					System.out.println("What size of pizza do you want?");
 					System.out.println("The possible sizes are: ");
 					for (int i = 0; i < posSizes.size(); i++) {
@@ -120,9 +117,9 @@ public class Main {
 							break;
 						tmpPizza.addTopping(posTopps.get(tmpInput));
 					}
-					
+
 					testOrder1.addMenuItem(tmpPizza);
-					
+
 					System.out.println("Would you like to enter another item? (n for no)");
 					loop = sc.next();
 				}
