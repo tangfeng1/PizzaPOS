@@ -13,23 +13,23 @@ import java.math.BigDecimal;
 
 public class ItemSize {
 
-	private String size;
-	private BigDecimal price;
+	private String		size;
+	private BigDecimal	price;
 
 	/**
 	 * Public constructor. An ItemSize starts with:
 	 * 
 	 * @param size
 	 *            a size
-	 * @param price
-	 *            a price
+	 * @param priceOffset
+	 *            a price offset from the base price
 	 * 
 	 * 
 	 *            These attributes cannot be changed.
 	 */
-	public ItemSize(String size, BigDecimal price) {
+	public ItemSize(String size, BigDecimal priceOffset) {
 		this.size = size;
-		this.price = price;
+		this.price = priceOffset;
 	}
 
 	/**

@@ -6,9 +6,6 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
-
-	/* Fields Omitted */
-
 	/**
 	 * The main method controls the creation of the GUI, the initiation of the menu, dispatch
 	 * system, time sheet, and loads information from all databases into memory. It also deals with
