@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Contains all items that are on the menu -->
+<restaurant_menu>
+	<MenuItem>
+		<name>Pizza</name>
+		<basePrice>10</basePrice>
+		<possSizes>
+			<ItemSize>
+				<size>Small</size>
+				<price>0</price>
+			</ItemSize>
+			<ItemSize>
+				<size>Medium</size>
+				<price>2</price>
+			</ItemSize>
+			<ItemSize>
+				<size>Large</size>
+				<price>3</price>
+			</ItemSize>
+		</possSizes>
+		<possSauces>
+			<Sauce>Pizza Sauce</Sauce>
+			<Sauce>Alfredo Sauce</Sauce>
+		</possSauces>
+		<possTopps>
+			<Topping>
+				<name>Pepperoni</name>
+				<type>1</type>
+			</Topping>
+			<Topping>
+				<name>Mozzarella</name>
+				<type>0</type>
+			</Topping>
+			<Topping>
+				<name>Green Pepper</name>
+				<type>1</type>
+			</Topping>
+			<Topping>
+				<name>Sun-dried Tomato</name>
+				<type>2</type>
+			</Topping>
+		</possTopps>
+	</MenuItem>
+</restaurant_menu>

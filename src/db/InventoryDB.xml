@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Contains all items that are in the inventory -->
+<inventory>
+	<StockItem>
+		<name>Flour</name>
+		<price></price>
+		<type></type>
+		<quantity></quantity>
+		<description></description>
+	</StockItem>
+	
+	<StockItem>
+		<name>Yeast</name>
+		<price></price>
+		<type></type>
+		<quantity></quantity>
+		<description></description>
+	</StockItem>
+	
+	<StockItem>
+		<name>Mozzarella</name>
+		<price></price>
+		<type></type>
+		<quantity></quantity>
+		<description></description>
+	</StockItem>
+	
+	<StockItem>
+		<name>Tomato Paste</name>
+		<price></price>
+		<type></type>
+		<quantity></quantity>
+		<description></description>
+	</StockItem>
+</inventory>

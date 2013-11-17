@@ -23,9 +23,6 @@ public class ItemSize {
 	 *            a size
 	 * @param priceOffset
 	 *            a price offset from the base price
-	 * 
-	 * 
-	 *            These attributes cannot be changed.
 	 */
 	public ItemSize(String size, BigDecimal priceOffset) {
 		this.size = size;

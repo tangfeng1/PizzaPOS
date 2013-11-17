@@ -10,13 +10,13 @@ import java.util.ArrayList;
 
 public class Inventory {
 
-	private ArrayList<Item> inventory;
+	private ArrayList<StockItem> inventory;
 
 	/**
 	 * Public constructor.
 	 */
 	public Inventory() {
-		inventory = new ArrayList<Item>();
+		inventory = new ArrayList<StockItem>();
 	}
 
 	/**
@@ -34,7 +34,7 @@ public class Inventory {
 	 * @pre isInInv() == false
 	 * @post isInInv() == true
 	 */
-	public void addToInv(Item item) {
+	public void addToInv(StockItem item) {
 		inventory.add(item);
 	}
 
@@ -44,7 +44,7 @@ public class Inventory {
 	 * 
 	 * @return true if found, false if not
 	 */
-	public boolean isInInv(Item item) {
+	public boolean isInInv(StockItem item) {
 		if (inventory.indexOf(item) == -1) {
 			return false;
 		}

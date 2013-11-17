@@ -18,7 +18,7 @@ package pos;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 
-public class MenuItem extends Item {
+public class MenuItem {
 
 	private String				name;
 	private int					quantity;
@@ -43,7 +43,6 @@ public class MenuItem extends Item {
 	 * 
 	 */
 	public MenuItem(String name) {
-		super(name);
 		toppings = new ArrayList<Topping>();
 		setPosTopps(new ArrayList<Topping>());
 		posSizes = new ArrayList<ItemSize>();
@@ -80,8 +79,8 @@ public class MenuItem extends Item {
 	}
 
 	/**
-	 * getPrice() determines the total cost of the menu item, taking into
-	 * account the quantity, base price, and toppings
+	 * getPrice() determines the total cost of the menu item, taking into account the quantity, base
+	 * price, and toppings
 	 * 
 	 * @return the price of this MenuItem
 	 */

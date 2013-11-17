@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><!--Contains information on all items 
-	that are on the menu -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Contains all items that are on the menu -->
 <restaurant_menu>
 	<MenuItem>
 		<name>Pizza</name>
