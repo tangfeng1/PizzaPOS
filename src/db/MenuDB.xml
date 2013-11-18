@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--Contains all items that are on the menu -->
 <restaurant_menu>
-	<MenuItem>
-		<name>Pizza</name>
-		<basePrice>10</basePrice>
+	<MenuItem name="Pizza" basePrice = 10>
 		<possSizes>
 			<ItemSize>
 				<size>Small</size>

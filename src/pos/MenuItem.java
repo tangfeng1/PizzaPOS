@@ -145,21 +145,6 @@ public class MenuItem {
 		this.toppings = toppings;
 	}
 
-	/**
-	 * @param item
-	 *            Write the contents of a menu item to the database
-	 */
-	public void toDB(MenuItem item) {
-	}
-
-	/**
-	 * 
-	 * @return a MenuItem object that has been loaded from the database
-	 */
-	public MenuItem fromDB() {
-		return null;
-	}
-
 	public void incQuantity() {
 		quantity++;
 

@@ -13,7 +13,7 @@ import java.math.BigDecimal;
 
 public class ItemSize {
 
-	private String		size;
+	private String		sizeName;
 	private BigDecimal	price;
 
 	/**
@@ -25,7 +25,7 @@ public class ItemSize {
 	 *            a price offset from the base price
 	 */
 	public ItemSize(String size, BigDecimal priceOffset) {
-		this.size = size;
+		this.sizeName = size;
 		this.price = priceOffset;
 	}
 
@@ -34,7 +34,7 @@ public class ItemSize {
 	 * @return the size of the item
 	 */
 	public String getSize() {
-		return size;
+		return sizeName;
 	}
 
 	/**

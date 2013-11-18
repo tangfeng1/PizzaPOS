@@ -2,13 +2,7 @@
 package pos;
 
 import java.io.File;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-
-import org.w3c.dom.Document;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
+import java.math.BigDecimal;
 
 public class Main {
 	/**
@@ -39,45 +33,54 @@ public class Main {
 		CompletedOrders compOrders = new CompletedOrders();
 		// Create a menu object
 		Menu menu = new Menu();
+		// Creates an object for database operations
+		DBOperations dbo = new DBOperations();
 
-		try {
-			File fMenuDB = new File("src/db/MenuDB.xml");
-			File fInvDB = new File("src/db/InventoryDB.xml");
+		File custDB = new File("src/db/custDB.xml");
 
-			DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
-			DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-			Document doc = dBuilder.parse(fMenuDB);
+		Customer cust = new Customer();
+		cust.setPhoneNum("5555555555");
+		cust.setName("Bob McBobbles");
+		cust.setAddr1("123 Chode Dr NE");
+		cust.setAddr2("Unit 2");
+		cust.setCity("Atlanta");
+		cust.setState("Georgia");
+		cust.setZip("30318");
 
-			doc.getDocumentElement().normalize();
+		custRecs.addCust(cust);
 
-			System.out.println("Root Element: " + doc.getDocumentElement().getNodeName());
+		Customer cust2 = new Customer();
 
-			if (doc.hasChildNodes()) {
-				printNode(doc.getChildNodes());
-			}
-		} catch (Exception e) {
-			System.out.println(e.getMessage());
-		}
+		cust2.setPhoneNum("5555555555");
+		cust2.setName("John Smith lol");
+		cust2.setAddr1("567 Blah Ln");
+		cust2.setAddr2("Unit 1");
+		cust2.setCity("Atlanta");
+		cust2.setState("Georgia");
+		cust2.setZip("30318");
 
-	}
+		custRecs.addCust(cust2);
 
-	private static void printNode(NodeList nodeList) {
-		for (int count = 0; count < nodeList.getLength(); count++) {
-			Node tempNode = nodeList.item(count);
+		dbo.toXML(custRecs, custDB);
 
-			if (tempNode.hasChildNodes()) {
-				// loop again if has child nodes
-				printNode(tempNode.getChildNodes());
-			} else {
-				if (tempNode.getNodeType() == Node.TEXT_NODE
-						&& !tempNode.getTextContent().trim().equals("")) {
-					System.out.println(tempNode.getParentNode().getNodeName() + ": "
-							+ tempNode.getTextContent());
-				}
-				// System.out.println();
-			}
+		MenuItem item = new MenuItem("Pizza");
+		item.setSize(new ItemSize("Small", new BigDecimal(0)));
+		item.addTopping(new Topping("Pepperoni", "Standard", new BigDecimal(2)));
+		item.addTopping(new Topping("Mushroom", "Standard", new BigDecimal(2)));
+		item.setQuantity(1);
 
-		}
+		// dbo.toXML(item);
+
+		// for (Customer c : custRecs.getCustRecs()) {
+		// System.out.println()
+		// }
+
+		// Customer testCust = (Customer) dbo.fromXML(custDB);
+		// System.out.println(testCust);
+
+		// custRecs.addCust((Customer) dbo.fromXML(custDB));
+
+		// System.out.println(custRecs.getCustRecs());
 
 	}
 }
